@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "BUILD",
+			"command": "clang++",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"-pthread",
+				"-std=c++17",
+				"${workspaceFolder}/*.cpp",
+				"-o",
+				"${workspaceFolder}/main"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/clang++"
+		},
+	]
+}
