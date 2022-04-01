@@ -14,11 +14,13 @@ public:
 		: idx(index), alloc(allocate), max_(maximum), need(max_ - alloc), bank(bank_) {}
 
 	int get_id() const { return idx; }
+
 	pthread_t *get_threadid() { return &thread_id; }
 
 	Bank *get_bank() const { return bank; }
 
 	bool needs_met() const { return alloc == max_; }
+
 	bool too_much(const vector_<int> &req) const
 	{
 		int n = req.size();

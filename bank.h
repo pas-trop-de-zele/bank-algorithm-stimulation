@@ -22,6 +22,7 @@ public:
 	//    is_safe() and req_approved()
 
 	bool is_safe(int id, const vector_<int> &req) { return true; }
+
 	bool req_approved(int id, const vector_<int> &req)
 	{
 		Customer *c = customers[id];

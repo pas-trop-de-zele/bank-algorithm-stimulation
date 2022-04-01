@@ -44,7 +44,7 @@ public:
 			v.push_back(el);
 		}
 	}
-	
+
 	//------------------------------------------------------------------
 	bool empty() const { return v.empty(); }
 	size_t size() const { return v.size(); }
