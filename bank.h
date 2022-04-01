@@ -49,11 +49,8 @@ public:
 
 	void show() const
 	{
+		show_available();
 		std::stringstream ss;
-		ss << "\n+-----------------------------------------\n"
-			  "|   BANK   avail: ["
-		   << avail.as_string().c_str() << "]\n"
-										   "+-----------------------------------------\n";
 		for (Customer *c : customers)
 		{
 			ss << "| P# " << std::setw(2) << c->get_idx() << "   "
@@ -67,6 +64,16 @@ public:
 		Utils::print_locked("%s"
 							"+----------------------------------------\n",
 							(s.c_str()));
+	}
+
+	void show_available() const
+	{
+		std::stringstream ss;
+		ss << "\n+-----------------------------------------\n"
+			  "|   BANK   avail: ["
+		   << avail.as_string().c_str() << "]\n"
+										   "+-----------------------------------------\n";
+		std::cout << ss.str();
 	}
 
 	friend std::ostream &operator<<(std::ostream &os, const Bank &bank)
